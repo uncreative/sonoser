@@ -1,0 +1,17 @@
+[[source]]
+verify_ssl = true
+url = "https://pypi.org/simple"
+name = "pypi"
+
+[packages]
+flask = "*"
+soco = "*"
+ipython = "*"
+pytest = "*"
+coverage = "*"
+mock = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block head_js %}
+    <script>
+      window.sonoser = {};
+      window.sonoser.buttonsByZone = {{ buttons_by_zone | tojson }};
+      window.sonoser.playlists = {{ playlists | tojson }};
+      window.sonoser.zones = {{ zones | tojson }};
+      window.sonoser.lastModifiedZone = {{ selected_zone | tojson }}
+    </script>
+    <script src="/static/js/configure.js"></script>
+{% endblock %}
+
+
+{% block header %}
+    <h1>{% block title %}Configure{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <div id="options">
+        </div>
+        <div>
+            <table id="buttons_table"></table>
+            <input type="submit" value="save">
+        </div>
+    </form>
+{% endblock %}
